@@ -1,0 +1,89 @@
+
+
+/*Pass by Value: In this parameter passing method, values of actual parameters are copied to function’s formal parameters and the two types of parameters are stored in different memory locations. So any changes made inside functions are not reflected in actual parameters of caller.
+
+Pass by Reference Both actual and formal parameters refer to same locations, so any changes made inside the function are actually reflected in actual parameters of caller.
+*/
+
+# include <stdio.h> 
+
+// the example of call by value
+void fun(int ptr) 
+{ 
+    ptr = 30; 
+} 
+   
+int main() 
+{ 
+  int x = 20; 
+  fun(x); 
+  printf("x = %d", x); 
+   
+  return 0; 
+} 
+
+
+// the example of call by refrence 
+
+void fun(int &ptr) 
+{ 
+    ptr = 30; 
+} 
+   
+int main() 
+{ 
+  int x = 20; 
+  fun(x); 
+  printf("x = %d", x); 
+   
+  return 0; 
+} 
+// the example of cal by Reference
+
+
+void fun(int &ptr) 
+{ 
+    ptr = 30; 
+} 
+   
+int main() 
+{ 
+  int x = 20; 
+  fun(x); 
+  printf("x = %d", x); 
+   
+  return 0; 
+} 
+// the example of cal by Reference
+
+
+void fun(int &ptr) 
+{ 
+    ptr = 30; 
+} 
+   
+int main() 
+{ 
+  int x = 20; 
+  fun(x); 
+  printf("x = %d", x); 
+   
+  return 0; 
+} 
+// the example of cal by Reference
+
+
+void fun(int *ptr) 
+{ 
+    *ptr = 30; 
+} 
+   
+int main() 
+{ 
+  int x = 20; 
+  fun(x); 
+  printf("x = %d", x); 
+   
+  return 0; 
+} 
+
