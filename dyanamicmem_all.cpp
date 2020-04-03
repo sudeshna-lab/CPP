@@ -49,7 +49,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
    /*https://stackoverflow.com/questions/25802322/understanding-of-pointers-with-malloc-and-free/
    https://stackoverflow.com/questions/25205900/c-declaring-variables-and-calling-malloc
    https://stackoverflow.com/questions/19435433/what-happens-if-i-use-malloc-twice-on-the-same-pointer-c
-   
+   https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/
    
    
    
