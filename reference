@@ -1,0 +1,76 @@
+Reference variables are the alias of another variable while pointer variable are the special type of variable that contains the address of another variable.
+
+Reference and pointers both can be used to refer the actual variable they provide the direct access to the variable.
+
+But, references have some advantages over the pointer variables, those are:
+
+In pointers - To access the value of actual variable, we need to explicitly deference the pointer variable by using ‘value at address’ operator/ dereferencing operator (*).
+
+In references - To access the value of actual variable, we do not need to explicitly dereference the reference variable, they gets de-referenced automatically.
+
+Reference variables are cleaner and modish as compare to the pointers; they can also be used while passing in the function as arguments, known as call by references.
+
+
+Modify the passed parameters in a function : If a function receives a reference to a variable, it can modify the value of the variable. 
+For example, in the following program variables are swapped using references.
+
+
+#include<iostream> 
+using namespace std; 
+  
+void swap (int& first, int& second) 
+{ 
+    int temp = first; 
+    first = second; 
+    second = temp; 
+} 
+  
+int main() 
+{ 
+    int a = 2, b = 3; 
+    swap( a, b ); 
+    cout << a << " " << b; 
+    return 0; 
+} 
+
+#include<iostream> 
+using namespace std; 
+  
+void swap (int *first, int *second) 
+{ 
+    int temp = *first; 
+    *first = *second; 
+    *second = temp; 
+} 
+  
+int main() 
+{ 
+    int a = 2, b = 3; 
+    swap( a, b ); 
+    cout << a << " " << b; 
+    return 0; 
+} 
+tis also gives a same result
+A pointer can be declared as void but a reference can never be void
+For example
+
+int a = 10;
+void* aa = &a;. //it is valid
+void &ar = a; // it is not valid
+Thanks to Shweta Bansal for adding this point.
+
+References are less powerful than pointers
+
+1) Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+2) References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
+3) A reference must be initialized when declared. There is no such restriction with pointers
+
+Due to the above limitations, references in C++ cannot be used for implementing data structures like Linked List, Tree, etc. In Java, references don’t have above restrictions, and can be used to implement all data structures. References being more powerful in Java, is the main reason Java doesn’t need pointers.
+
+References are safer and easier to use:
+1) Safer: Since references must be initialized, wild references like wild pointers are unlikely to exist. It is still possible to have references that don’t refer to a valid location (See questions 5 and 6 in the below exercise )
+2) Easier to use: References don’t need dereferencing operator to access the value. They can be used like normal variables. ‘&’ operator is needed only at the time of declaration. Also, members of an object reference can be accessed with dot operator (‘.’), unlike pointers where arrow operator (->) is needed to access members.
+
+Together with the above reasons, there are few places like copy constructor argument where pointer cannot be used. Reference must be used pass the argument in copy constructor. Similarly references must be used for overloading some operators like ++.
+
+

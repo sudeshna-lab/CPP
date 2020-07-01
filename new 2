@@ -1,0 +1,94 @@
+1) Explain what AWS is?
+AWS stands for Amazon Web Service; it is a collection of remote computing services also known as a cloud computing platform.  This new realm of cloud computing is also known as IaaS or Infrastructure as a Service.
+2) Mention what the key components of AWS are?
+The key components of AWS are
+Route 53:A DNS web service
+Simple E-mail Service:It allows sending e-mail using RESTFUL API call or via regular SMTP
+Identity and Access Management:It provides enhanced security and identity management for your AWS account
+Simple Storage Device or (S3):It is a storage device and the most widely used AWS service
+Elastic Compute Cloud (EC2): It provides on-demand computing resources for hosting applications. It is handy in case of unpredictable workloads
+Elastic Block Store (EBS):It offers persistent storage volumes that attach to EC2 to allow you to persist data past the lifespan of a single Amazon EC2 instance
+CloudWatch: To monitor AWS resources, It allows administrators to view and collect key Also, one can set a notification alarm in case of trouble.
+
+
+ How can you send a request to Amazon S3?
+Amazon S3 is a REST service, and you can send a request by using the REST API or the AWS SDK wrapper libraries that wrap the underlying Amazon S3 REST API.
+It has a REST interface and uses secure HMAC-SHA1 authentication keys
+
+How many buckets can you create in AWS by default?
+By default, you can create up to 100 buckets in each of your AWS accounts.
+
+
+T2 instances are designed to provide moderate baseline performance and the capability to burst to higher performance as required by the workload.
+
+Representational state transfer
+
+
+REST determines how the API looks like. It stands for “Representational State Transfer”. It is a set of rules that developers follow when they create their API. 
+One of these rules states that you should be able to get a piece of data (called a resource) when you link to a specific URL.
+
+Each URL is called a request while the data sent back to you is called a response.
+The endpoint
+The method
+The headers
+The data (or body)
+
+
+
+
+This request is used to get a resource from a server. If you perform a `GET` request,
+ the server looks for the data you requested and sends it back to you. In other words, 
+a `GET` request performs a `READ` operation. This is the default request method
+
+
+
+
+
+what is s3
+
+Amazon S3 (Simple Storage Service) is a simple web service interface that allows huge amount of data storage 
+sand retrival from anywhere from the internet.Its provides developers highly scalable, reliable, fast and low cost data storage infrastructure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This request is used to create a new resource on a server. If you perform a `POST` request,
+the server creates a new entry in the database and tells you 
+whether the creation is successful. In other words, a `POST` request performs an `CREATE` operation.
+curl -X POST <URL> -d property1=value1/ send the data
+
+These two requests are used to update a resource on a server. If you perform a `PUT` or `PATCH` request, the server updates an 
+entry in the database and tells you whether the update is successful. In other words, a `PUT` or `PATCH` request performs an `UPDATE` operation.
+
+
+
+
+
+
+
+
+
+

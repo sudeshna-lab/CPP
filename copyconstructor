@@ -1,0 +1,15 @@
+When is copy constructor called?
+In C++, a Copy Constructor may be called in following cases:
+1. When an object of the class is returned by value.
+2. When an object of the class is passed (to a function) by value as an argument.
+3. When an object is constructed based on another object of the same class.
+4. When the compiler generates a temporary object.
+
+It is, however, not guaranteed that a copy constructor will be called in all these cases, 
+because the C++ Standard allows the compiler to optimize the copy away in certain cases,
+
+As it is used to create an object, hence it is called a constructor.
+ And, it creates a new object, which is exact copy of the existing copy, hence it is called copy constructor.
+https://www.studytonight.com/cpp/copy-constructor-in-cpp.php#:~:text=Copy%20Constructor%20in%20C%2B%2B,Constructor%20to%20all%20the%20classes.
+https://www.dummies.com/programming/cpp/why-you-need-copy-constructors-in-c/
+https://www.geeksforgeeks.org/copy-constructor-in-cpp/
