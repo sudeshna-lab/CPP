@@ -1,9 +1,16 @@
 /******************************************************************************
+1. only the single instant through out the program
+2.global access --- we can access it from any where from the code
+3. no ownership --- no ownership freely can flow anywhere
+4 lazy initialization
+advantage --- save memory -- one object (time and memory)
+single access --- logger(log info) and data bease connection (if multiple can corrupt the data base)
+flexibility -- without making it global making it siggleton
 
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
-Code, Compile, Run and Debug online from anywhere in world.
+used -- 
+Multithreaded application , thread pull
+database application -- logging
+cinfugration seting -- game setting 
 
 *******************************************************************************/
 #include <fstream>
