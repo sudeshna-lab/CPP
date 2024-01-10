@@ -1,0 +1,66 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+class base
+{
+    public:
+    void show()
+    {
+        cout << "base class show" << endl;
+        
+    }
+    
+    void base_specific_func()
+    {
+        
+        cout << "base specific function" << endl;
+    }
+    
+};
+
+
+class derive:public base
+{
+    
+    public:
+    void show()
+    {
+        
+        cout << "derived class show" << endl;
+        
+    }
+    
+    void derive_func()
+    {
+        cout << "derive class specific function" << endl;
+        cout << "calling base class show function from derive class" << endl;
+       base::show();
+    }
+
+    
+};
+
+
+int main()
+{
+    
+    base b; // base class object
+    derive d; // derive class object
+    
+    d.show();  // derive class show func will call
+    d.derive_func(); // derive class fuction
+    d.base_specific_func(); // base specific function
+    
+    b.show();     // base class show
+   // b.derive_func(); // base class object cant call derive class func
+    b.base_specific_func(); // base class specific fucntiom
+    
+    base *p; // base class pointer
+    p = &d;  // base class pointer assigned to derive class object
+    p->show();  //  base class show will call
+    d.base::show(); // this is the way we can call base class override function
+}
+    
+    
